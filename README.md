@@ -25,7 +25,7 @@ Participate
 
 Activity
 * nid: Number (PK)
-* nname: String (Not Null)
+* name: String (Not Null)
 
 Current
 * nid: Number (PK, Not Null)
