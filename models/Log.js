@@ -5,7 +5,7 @@ var logSchema = new Schema({
     nid: Number, // FK from activity
     uid: Number, // FK from user
     money: Number, // positive
-    time: Date // timestamp
+    time: { type: Date, default: Date.now  } // timestamp
 });
 
 module.exports = mongoose.model('log', logSchema);
