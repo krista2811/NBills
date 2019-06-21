@@ -20,13 +20,16 @@ var port = process.env.PORT || 500;
 /*
 [CONFIGURE MODELS]
 */
-var Account = require('./models/Account');
+var AccountModule = require('./models/Account');
+var Account = AccountModule.model;
+var AccountSchema = AccountModule.schema;
 var Activity = require ('./models/Activity');
 var Bank = require ('./models/Bank');
 var Current = require ('./models/Current');
 var Debt = require ('./models/Debt');
-var Log = require ('./models/Log');
-var Participate = require ('./models/Participate');
+var LogModule = require ('./models/Log');
+var Log = LogModule.model;
+var LogSchema = LogModule.schema;
 var User = require ('./models/User');
 
 /*

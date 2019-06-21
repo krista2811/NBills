@@ -2,11 +2,12 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var accountSchema = new Schema({
-    aid: Number,
-    uid: Number, // FK from user
     real_name: String,
-    bid: Number, // FK from bank
-    account: String
+    bank: {type: Schema.Types.ObjectId, ref: 'Bank'}, // FK from bank
+    account: {type: String, required: true}
 });
 
-module.exports = mongoose.model('account', accountSchema);
+module.exports = {
+	model: mongoose.model('account', accountSchema),
+	schema: accountSchema
+};
